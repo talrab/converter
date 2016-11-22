@@ -25,7 +25,7 @@ public class TemperatureConverterPage {
         System.out.println(valueOfCelsius);
         return valueOfCelsius;
     }
-    public String expectedResult(){
-        return "37";
+    public String expectedResult(int result){
+        return String.valueOf(result);
     }
 }
