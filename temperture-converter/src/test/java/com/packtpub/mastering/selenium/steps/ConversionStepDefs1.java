@@ -46,7 +46,7 @@ public class ConversionStepDefs1 {
         //input Fahrenheit value
         System.out.println("arg1 = " + arg1);
         temperatureConverterPage.inputFahrenheit(arg1);
-        //test comment
+        //test comment1b
     }
 
     @Then("^It then should be converted to Celsius as (\\d+) degree$")
