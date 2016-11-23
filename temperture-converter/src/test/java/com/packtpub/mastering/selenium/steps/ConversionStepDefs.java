@@ -7,7 +7,7 @@ import cucumber.annotation.Before;
 import cucumber.annotation.en.Given;
 import cucumber.annotation.en.Then;
 import cucumber.annotation.en.When;
-
+import java.io.File;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import java.util.concurrent.TimeUnit;
@@ -21,9 +21,22 @@ public class ConversionStepDefs {
     private WebDriver driver;
     public Google googlePage;
     public TemperatureConverterPage temperatureConverterPage;
+    private String chromeWebDriverpath1 = "c:\\D\\Online Courses\\Selenium and continoues integration\\Tools\\chromedriver.exe";
+    private String chromeWebDriverpath2 = "d:\\Tal - Work Related\\myWorkspace\\chromedriver.exe";
+    private String activeChromeWebDriverPath = "";
     @Given("I want to  convert (\\d+).(\\d+) degree Fahrenheit to Celsius")
     public void I_want_to_convert_degree_Fahrenheit_to_Celsius(int arg1, int arg2) throws Throwable {
-        System.setProperty("webdriver.chrome.driver", "c:\\D\\Online Courses\\Selenium and continoues integration\\Tools\\chromedriver.exe");
+
+        File f = new File (chromeWebDriverpath1);
+        if (f.exists()) {
+            activeChromeWebDriverPath = chromeWebDriverpath1;
+        }
+        else{
+            activeChromeWebDriverPath = chromeWebDriverpath2;
+        }
+
+
+        System.setProperty("webdriver.chrome.driver", activeChromeWebDriverPath);
         driver = new ChromeDriver();
         driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
