@@ -17,24 +17,18 @@ import static org.junit.Assert.fail;
 /**
  * Created by Ripon on 11/26/2015.
  */
-public class ConversionStepDefs {
+public class TempConversionStepDefs {
     private WebDriver driver;
     public Google googlePage;
     public TemperatureConverterPage temperatureConverterPage;
-    private String chromeWebDriverpath1 = "c:\\D\\Online Courses\\Selenium and continoues integration\\Tools\\chromedriver.exe";
-    private String chromeWebDriverpath2 = "d:\\Tal - Work Related\\myWorkspace\\chromedriver.exe";
+    private DriverSettings driverSettings ;
+
     private String activeChromeWebDriverPath = "";
     @Given("I want to  convert (\\d+).(\\d+) degree Fahrenheit to Celsius")
     public void I_want_to_convert_degree_Fahrenheit_to_Celsius(int arg1, int arg2) throws Throwable {
 
-        File f = new File (chromeWebDriverpath1);
-        if (f.exists()) {
-            activeChromeWebDriverPath = chromeWebDriverpath1;
-        }
-        else{
-            activeChromeWebDriverPath = chromeWebDriverpath2;
-        }
-
+        driverSettings = new DriverSettings();
+        activeChromeWebDriverPath = driverSettings.getActiveChromeWebDriverPath();
 
         System.setProperty("webdriver.chrome.driver", activeChromeWebDriverPath);
         driver = new ChromeDriver();
