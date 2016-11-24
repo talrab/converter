@@ -29,4 +29,13 @@ public class Google {
         wait.until(ExpectedConditions.presenceOfElementLocated(By.id("resultStats")));
         return new TemperatureConverterPage(driver);
     }
+
+    public LengthConverterPage goToLengthConversionPage(){
+        driver.findElement(By.id("lst-ib")).clear();
+        driver.findElement(By.id("lst-ib")).sendKeys("from meter to feet");
+        driver.findElement(By.name("btnG")).click();
+        WebDriverWait wait = new WebDriverWait(driver, 10);
+        wait.until(ExpectedConditions.presenceOfElementLocated(By.id("resultStats")));
+        return new LengthConverterPage (driver);
+    }
 }

@@ -17,7 +17,7 @@ import static org.junit.Assert.fail;
 /**
  * Created by Ripon on 11/26/2015.
  */
-public class ConversionStepDefs {
+public class TempConversionStepDefs {
     private WebDriver driver;
     public Google googlePage;
     public TemperatureConverterPage temperatureConverterPage;
