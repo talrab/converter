@@ -30,8 +30,6 @@ public class LengthConversionStepDefs {
 
         driverSettings = new DriverSettings();
         activeChromeWebDriverPath = driverSettings.getActiveChromeWebDriverPath();
-
-
         System.setProperty("webdriver.chrome.driver", activeChromeWebDriverPath);
         driver = new ChromeDriver();
         driver.manage().window().maximize();
@@ -43,7 +41,6 @@ public class LengthConversionStepDefs {
     @When("^I input the value of Meter (\\d+) in text field$")
     public void I_input_the_value_of_Meter_in_text_field(int arg1) throws Throwable {
         //input Meter value
-        System.out.println("arg1 = " + arg1);
         lengthConverterPage.inputMeter(arg1);
     }
 

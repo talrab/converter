@@ -21,12 +21,12 @@ public class TempConversionStepDefs1 {
     public TemperatureConverterPage temperatureConverterPage;
     private DriverSettings driverSettings ;
     private String activeChromeWebDriverPath = "";
+
     @Given("I need to  convert (\\d+).(\\d+) degree Fahrenheit to Celsius")
     public void I_want_to_convert_degree_Fahrenheit_to_Celsius(int arg1, int arg2) throws Throwable {
 
         driverSettings = new DriverSettings();
         activeChromeWebDriverPath = driverSettings.getActiveChromeWebDriverPath();
-
         System.setProperty("webdriver.chrome.driver", activeChromeWebDriverPath);
         driver = new ChromeDriver();
         driver.manage().window().maximize();
@@ -38,7 +38,6 @@ public class TempConversionStepDefs1 {
     @When("^I then input the value of Fahrenheit as (\\d+) in text field$")
     public void I_input_the_value_of_Fahrenheit_as_in_text_field(int arg1) throws Throwable {
         //input Fahrenheit value
-        System.out.println("arg1 = " + arg1);
         temperatureConverterPage.inputFahrenheit(arg1);
         //test comment2
     }
