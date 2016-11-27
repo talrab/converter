@@ -29,11 +29,10 @@ public class LengthConversionStepDefs {
     public void I_want_to_convert_Meter_to_Feet(int arg1) throws Throwable {
 
         driverSettings = new DriverSettings();
-        activeChromeWebDriverPath = driverSettings.getActiveChromeWebDriverPath();
-        System.setProperty("webdriver.chrome.driver", activeChromeWebDriverPath);
-        driver = new ChromeDriver();
-        driver.manage().window().maximize();
-        driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+        //activeChromeWebDriverPath = driverSettings.getActiveChromeWebDriverPath();
+        driverSettings.setDriverProperties("Chrome");
+        this.driver = driverSettings.prepareWebDriver("Chrome");
+
         googlePage = new Google(driver);
         lengthConverterPage = googlePage.goToLengthConversionPage();
     }
