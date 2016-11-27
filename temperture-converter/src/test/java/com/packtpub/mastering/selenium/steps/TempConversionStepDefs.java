@@ -33,6 +33,8 @@ public class TempConversionStepDefs {
 
         googlePage = new Google(driver);
         temperatureConverterPage = googlePage.goToTemperatureConversionPage();
+
+       // temperatureConverterPage.goToUsingDropDown();
     }
 
     @When("^I input the value of Fahrenheit as (\\d+.\\d+) in text field$")
