@@ -5,6 +5,7 @@ import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.ie.InternetExplorerDriver;
 
 /**
  * Created by talr on 24/11/2016.
@@ -18,7 +19,7 @@ public class DriverSettings {
     public DriverSettings() {
                 }
 
-
+        //need this method because I use two different machines where the chromdriver is placed in different locations.
         private String getActiveChromeWebDriverPath () {
 
             File f = new File (chromeWebDriverpath1);
@@ -36,11 +37,17 @@ public class DriverSettings {
             if (driverType == "Chrome") {
                 System.setProperty("webdriver.chrome.driver", path);
             }
+            else if (driverType == "IE"){
+                System.setProperty("webdriver.ie.driver", "c:\\D\\Online Courses\\Selenium and continoues integration\\Tools\\IEDriverServer.exe");
+            }
         }
         public WebDriver prepareWebDriver (String driverType){
 
             if (driverType == "Chrome") {
                 driver = new ChromeDriver();
+            }
+            else if (driverType == "IE") {
+                driver = new InternetExplorerDriver();
             }
             driver.manage().window().maximize();
             driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);

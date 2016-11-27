@@ -30,7 +30,9 @@ public class LengthConversionStepDefs {
 
         driverSettings = new DriverSettings();
         driverSettings.setDriverProperties("Chrome");
+        //driverSettings.setDriverProperties("IE");
         this.driver = driverSettings.prepareWebDriver("Chrome");
+        //this.driver = driverSettings.prepareWebDriver("IE");
 
         googlePage = new Google(driver);
         lengthConverterPage = googlePage.goToLengthConversionPage();
