@@ -29,7 +29,6 @@ public class LengthConversionStepDefs {
     public void I_want_to_convert_Meter_to_Feet(int arg1) throws Throwable {
 
         driverSettings = new DriverSettings();
-        //activeChromeWebDriverPath = driverSettings.getActiveChromeWebDriverPath();
         driverSettings.setDriverProperties("Chrome");
         this.driver = driverSettings.prepareWebDriver("Chrome");
 

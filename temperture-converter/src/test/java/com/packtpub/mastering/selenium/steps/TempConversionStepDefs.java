@@ -28,11 +28,9 @@ public class TempConversionStepDefs {
     public void I_want_to_convert_degree_Fahrenheit_to_Celsius(int arg1, int arg2) throws Throwable {
 
         driverSettings = new DriverSettings();
-        activeChromeWebDriverPath = driverSettings.getActiveChromeWebDriverPath();
-        System.setProperty("webdriver.chrome.driver", activeChromeWebDriverPath);
-        driver = new ChromeDriver();
-        driver.manage().window().maximize();
-        driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+        driverSettings.setDriverProperties("Chrome");
+        this.driver = driverSettings.prepareWebDriver("Chrome");
+
         googlePage = new Google(driver);
         temperatureConverterPage = googlePage.goToTemperatureConversionPage();
     }

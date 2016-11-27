@@ -19,7 +19,7 @@ public class DriverSettings {
                 }
 
 
-        public String getActiveChromeWebDriverPath () {
+        private String getActiveChromeWebDriverPath () {
 
             File f = new File (chromeWebDriverpath1);
             if (f.exists()) {
