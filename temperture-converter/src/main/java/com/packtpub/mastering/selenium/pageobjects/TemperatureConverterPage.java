@@ -2,6 +2,7 @@ package com.packtpub.mastering.selenium.pageobjects;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.support.ui.Select;
 
 /**
  * Created by Ripon on 11/28/2015.
@@ -28,4 +29,11 @@ public class TemperatureConverterPage {
     public String expectedResult(int result){
         return String.valueOf(result);
     }
+
+
+    public void goToUsingDropDown (){
+        Select select = new Select(driver.findElement(By.xpath("//*[@id=\"rso\"]/div[1]/div/div/div[1]/div/div[1]/select")));
+        select.selectByValue("Speed");
+    }
+
 }
