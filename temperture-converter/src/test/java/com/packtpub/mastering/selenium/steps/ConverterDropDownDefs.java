@@ -47,7 +47,6 @@ public class ConverterDropDownDefs {
     public void the_first_selected_messurement_should_be (String arg1) throws Throwable {
       assertEquals(arg1, temperatureConverterPage.getSelectedSubDropDown());
         driver.quit();
-        
     }
 
 }
