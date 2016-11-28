@@ -31,9 +31,14 @@ public class TemperatureConverterPage {
     }
 
 
-    public void goToUsingDropDown (){
+    public void goToUsingDropDown (String dropDownItem){
         Select select = new Select(driver.findElement(By.xpath("//*[@id=\"rso\"]/div[1]/div/div/div[1]/div/div[1]/select")));
-        select.selectByValue("Speed");
+        select.selectByValue(dropDownItem);
     }
 
+    public String getSelectedSubDropDown () {
+        Select subSelect = new Select(driver.findElement(By.xpath("//*[@id=\"_Bif\"]")));
+        System.out.println(subSelect.getFirstSelectedOption().getText() + "#################################");
+        return subSelect.getFirstSelectedOption().getText();
+    }
 }
