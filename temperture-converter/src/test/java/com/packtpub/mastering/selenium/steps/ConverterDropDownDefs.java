@@ -2,11 +2,14 @@ package com.packtpub.mastering.selenium.steps;
 
 
 import com.packtpub.mastering.selenium.pageobjects.Google;
-import cucumber.annotation.After;
-import cucumber.annotation.Before;
-import cucumber.annotation.en.Given;
-import cucumber.annotation.en.Then;
-import cucumber.annotation.en.When;
+//import cucumber.annotation.After;
+//import cucumber.annotation.Before;
+//import cucumber.annotation.en.Given;
+//import cucumber.annotation.en.Then;
+//import cucumber.annotation.en.When;
+import cucumber.api.java.en.Given;
+import cucumber.api.java.en.Then;
+import cucumber.api.java.en.When;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import com.packtpub.mastering.selenium.pageobjects.Google;

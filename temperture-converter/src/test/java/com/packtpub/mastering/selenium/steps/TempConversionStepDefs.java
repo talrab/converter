@@ -2,17 +2,22 @@ package com.packtpub.mastering.selenium.steps;
 
 import com.packtpub.mastering.selenium.pageobjects.Google;
 import com.packtpub.mastering.selenium.pageobjects.TemperatureConverterPage;
-import cucumber.annotation.After;
-import cucumber.annotation.Before;
-import cucumber.annotation.en.Given;
-import cucumber.annotation.en.Then;
-import cucumber.annotation.en.When;
+//import cucumber.annotation.After;
+//import cucumber.annotation.Before;
+//import cucumber.annotation.en.Given;
+//import cucumber.annotation.en.Then;
+//import cucumber.annotation.en.When;
+import cucumber.api.java.en.Given;
+import cucumber.api.java.en.Then;
+import cucumber.api.java.en.When;
 import java.io.File;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import java.util.concurrent.TimeUnit;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.fail;
+import cucumber.api.junit.Cucumber;
+
 
 /**
  * Created by Ripon on 11/26/2015.
