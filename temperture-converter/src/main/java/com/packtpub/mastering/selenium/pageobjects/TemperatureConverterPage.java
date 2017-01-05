@@ -32,7 +32,8 @@ public class TemperatureConverterPage {
 
 
     public void goToUsingDropDown (String dropDownItem){
-        Select select = new Select(driver.findElement(By.xpath("//*[@id=\"rso\"]/div[1]/div/div/div[1]/div/div[1]/select")));
+        //Select select = new Select(driver.findElement(By.xpath("//*[@id=\"rso\"]/div[1]/div/div/div[1]/div/div[1]/select")));
+        Select select = new Select(driver.findElement(By.xpath("//*[@id=\"rso\"]/div[1]/div/div/div/div[1]/div/div[1]/select")));
         select.selectByValue(dropDownItem);
     }
 

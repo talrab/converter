@@ -12,7 +12,7 @@ import cucumber.api.junit.Cucumber;
  */
 @RunWith(Cucumber.class)
 
-// was good for older verson of cucumber (1.0.14)
+// was good for older version of cucumber (1.0.14)
 //@Cucumber.Options(format = {"pretty", "html:target/cucumber-htmlreport","json-pretty:target/cucumber-report.json","junit:target/cucumber-results.xml"})
 
 @CucumberOptions( plugin = {"pretty", "html:target/cucumber-html-report", "json:target/cucumber-json-report.json" })
